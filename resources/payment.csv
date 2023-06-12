@@ -1,0 +1,7 @@
+id,date,amount,result,date(한글),item_id
+Kang,2017-01-01,500,confirmed,2017년 1월 1일,1
+Kim,2017-01-03,700,confirmed,2017년 1월 3일,2
+Choi,2017-01-05,800,confirmed,2017년 1월 5일,3
+Park,2017-01-07,500,canceled,2017년 1월 7일,2
+Lee,2017-01-09,700,confirmed,2017년 1월 9일,1
+Yoon,2017-01-01,200,canceled,2017년 1월 10일,4

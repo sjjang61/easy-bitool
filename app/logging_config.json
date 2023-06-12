@@ -1,0 +1,38 @@
+{
+  "PRD": {
+    "path": "/log/easy-bitool/prd/access.log",
+    "filename": "access.log",
+    "level": "info",
+    "rotation": "1 days",
+    "retention": "1 months",
+    "format": "<level>{level: <8}</level> <green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> request id: {extra[request_id]} - <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+
+  },
+  "STG": {
+    "path": "/log/easy-bitool/stg/access.log",
+    "filename": "access.log",
+    "level": "info",
+    "rotation": "1 days",
+    "retention": "1 months",
+    "format": "<level>{level: <8}</level> <green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> request id: {extra[request_id]} - <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+
+  },
+  "DEV": {
+    "path": "/log/easy-bitool/dev/access.log",
+    "filename": "access.log",
+    "level": "info",
+    "rotation": "1 days",
+    "retention": "1 months",
+    "format": "<level>{level: <8}</level> <green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> request id: {extra[request_id]} - <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+
+  },
+  "local": {
+    "path": "/Users/1111022/python_work/easy-bitool/logs/access.log",
+    "filename": "access.log",
+    "level": "info",
+    "rotation": "1 days",
+    "retention": "1 months",
+    "format": "<level>{level: <8}</level> <green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> request id: {extra[request_id]} - <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+</head>
+<style>
+    .main_area {
+        width:30%; display:inline; float:left; border : solid 1px grey; margin : 5px}
+    }
+</style>
+<body>
+
+<div class="main_area">
+    입력데이터
+    <input type="text" value="payments.csv">
+    <input type="button" value="분석" class="load_data">
+    <hr>
+
+    컬럼정보
+    <table>
+        <thead>
+            <tr>
+                <th>컬럼명</th>
+                <th>타입</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for header in response.header %}
+            <tr>
+                <td>{{ header }}</td>
+                <td>45000</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+    메타정보(컬럼)
+    <table>
+        <thead>
+            <tr>
+                <th>key</th>
+                <th>is_key</th>
+                <th>is_date</th>
+                <th>date_format</th>
+                <th>data_type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for columns in response.meta_info_list %}
+            <tr>
+                <td>{{ columns['key'] }}</td>
+                <td>{{ columns['is_key'] }}</td>
+                <td>{{ columns['is_date'] }}</td>
+                <td>{{ columns['date_format'] }}</td>
+                <td>{{ columns['type'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <hr>
+    미리보기
+    <table>
+        <thead>
+            <tr>
+                {% for header in response.header %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for body in response.body %}
+            <tr>
+                {% for header in response.header %}
+                <td>{{ body[header] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<div class="main_area">
+    입력데이터
+    <input type="text" value="payments.csv">
+    <input type="button" value="분석" class="load_data" >
+    <hr>
+
+    컬럼정보
+    <table>
+        <thead>
+            <tr>
+                <th>컬럼명</th>
+                <th>타입</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for header in response.header %}
+            <tr>
+                <td>{{ header }}</td>
+                <td>45000</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+    메타정보(컬럼)
+    <table>
+        <thead>
+            <tr>
+                <th>key</th>
+                <th>is_key</th>
+                <th>is_date</th>
+                <th>date_format</th>
+                <th>data_type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for columns in response.meta_info_list %}
+            <tr>
+                <td>{{ columns['key'] }}</td>
+                <td>{{ columns['is_key'] }}</td>
+                <td>{{ columns['is_date'] }}</td>
+                <td>{{ columns['date_format'] }}</td>
+                <td>{{ columns['type'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <hr>
+    미리보기
+    <table>
+        <thead>
+            <tr>
+                {% for header in response.header %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for body in response.body %}
+            <tr>
+                {% for header in response.header %}
+                <td>{{ body[header] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+<script>
+    $(document).on("click", ".load_data", function( evt ){
+          alert("clicker123");
+    });
+</script>
+</html>
